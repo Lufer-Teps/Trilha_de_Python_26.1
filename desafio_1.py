@@ -34,6 +34,6 @@ if custo_total >= orcamento:
     viagem_invalida=("Seu orçamento é inferior ao custo da viagem, logo ela é inválida. ")
     print(f"sua viagem não foi possivel pois o seu orçamento de {orcamento} é inferior ao custo da viagem de {custo_total}. Você ainda precisa de {dinheiro_pendente}.")
 else:
-    viagem_valida=("Sua viagem é válida. Aproveite!")
-    print(f"`{viagem_valida}informações finais: o seu orçamento é de {orcamento} reais. Sua viagem para {destino} durará {tempo}. O custo da sua hospedagem será de {valor_da_hospedagem} o custo total da viagem sera de {custo_total} e ainda sobrará {dinheiro_restante}. ")
+    
+    print(f"Sua viagem é válida Aproveite ! informações finais: o seu orçamento é de {orcamento} reais. Sua viagem para {destino} durará {tempo}. O custo da sua hospedagem será de {valor_da_hospedagem} o custo total da viagem sera de {custo_total} e ainda sobrará {dinheiro_restante}. ")
 
