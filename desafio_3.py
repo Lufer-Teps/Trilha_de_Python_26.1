@@ -1,4 +1,4 @@
-# Dados do inventário físico de reagentes químicos
+# Dados do inventário de reagentes químicos
 
 reagentes = ['Etanol', 'Acetona', 'Etanol', 'Ácido Sulfúrico', 'Benzeno', 'Acetona',
 'Etanol', 'Ácido Sulfúrico', 'Metanol', 'Tolueno', 'Etanol', 'Acetona', 'Ácido Acético', 'Etanol', 'Benzeno', 'Ácido Sulfúrico', 'Metanol', 'Ácido Acético',
@@ -17,14 +17,31 @@ purezas = [99.5, 92.0, 99.5, 98.0, 99.9, 98.5, 96.0, 99.0, 99.0, 98.8, 99.5, 92.
 96.0, 99.9, 98.0, 99.0, 95.0, 99.5, 92.0, 98.8, 99.0, 99.9, 99.5, 92.0, 99.0, 98.0, 98.5,
 95.0, 96.0]
 
+#separação e contagem com o "set
 
-reagentes_unicos = set(reagentes)
 
-print(f"Quantidade de reagentes diferentes: {len(reagentes_unicos)}")
+unicos = set(reagentes)
+
+print(f"Quantidade de reagentes diferentes: {len(unicos)}")
+
+#criação dop inventário com o "zip" e "list"
 
 inventario = list(zip(reagentes, lotes, purezas))
+inventario_unico = set(inventario)
 
 print(inventario)
+
+#criação de laço para exibir todos os reagentes, lotes e purezas enquanto os mesmos continuarem no inventário.
+for reagente, lote, pureza in inventario:
+    print(f"Frasco do Lote: {lote} | Reagente: {reagente} | Pureza: {pureza}%")
+
+#aprovação de lotes com pureza igual ou superior a 98.0%.
+
+aprovados = [lote for reagente, lote, pureza in inventario if pureza >= 98.0]
+
+print(f"Lotes aprovados: {aprovados}")
+
+
 
 
 
